@@ -66,7 +66,7 @@ def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
 # Fixed Role Credentials (Staff Password is: coffee123)
-STAFF_HASH = "a3c47c16f93a8f757b80046860008d929ed6d7e0e12943a24c150170d47c359f"
+STAFF_HASH = "7c857ffbd40f48949a28d16cdb88cd4f4961726b69b9cd6597b3b2d2519ef31a"
 
 # 3. Session State Logic with Fail-Safe Reset
 if "cart" not in st.session_state or not isinstance(st.session_state.cart, list):
