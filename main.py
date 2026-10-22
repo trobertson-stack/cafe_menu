@@ -128,7 +128,7 @@ if app_view == "🛒 Order Desk":
             st.markdown(f"#### {category}")
             for item_name, details in items.items():
                 with st.container(border=True):
-                    m_col1, m_col2, m_col3, m_colr = st.columns([2, 2, 1, 1])
+                    m_col1, m_col2, m_col3, m_col4 = st.columns([2, 2, 1, 1])
                     with m_col1:
                         st.markdown(f"**{details['emoji']} {item_name}**")
                         st.markdown(f"Base: `${details['price']:.2f}`")
