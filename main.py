@@ -94,7 +94,8 @@ MENU = {
 # 5. Sidebar Authentication Panel
 st.sidebar.title("🔐 Access Control")
 if st.sidebar.checkbox("Login as Staff/Kitchen"):
-    pwd_input = st.sidebar.text_input("Enter Staff Password", type="password")
+    pwd_input = st.sidebar.text_input("Enter Staff Password, '$$billsyall'", type="password")
+    # $$billsyall
     if hash_password(pwd_input) == STAFF_HASH:
         st.session_state.role = "Staff"
         st.sidebar.success("🔑 Staff Access Granted")
