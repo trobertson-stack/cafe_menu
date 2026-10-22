@@ -128,7 +128,7 @@ if app_view == "🛒 Order Desk":
             st.markdown(f"#### {category}")
             for item_name, details in items.items():
                 with st.container(border=True):
-                    m_col1, m_col2, m_col3 = st.columns([2, 2, 1])
+                    m_col1, m_col2, m_col3, m_colr = st.columns([2, 2, 1, 1])
                     with m_col1:
                         st.markdown(f"**{details['emoji']} {item_name}**")
                         st.markdown(f"Base: `${details['price']:.2f}`")
@@ -136,6 +136,7 @@ if app_view == "🛒 Order Desk":
                         selected_mod = st.selectbox("Options", details["mods"], key=f"m_{item_name}")
                     with m_col3:
                         qty = st.number_input("Qty", min_value=1, max_value=10, value=1, key=f"q_{item_name}")
+                    with m_col4:
                         if st.button("Add", key=f"b_{item_name}", use_container_width=True):
                             # Handle modifier pricing math
                             mod_price = 0.0
